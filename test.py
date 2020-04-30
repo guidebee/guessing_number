@@ -1,5 +1,5 @@
 import gym
-from gym import wrappers, logger
+
 import guessing_number
 
 
@@ -33,10 +33,6 @@ class BetterRandomAgent(object):
 
 if __name__ == '__main__':
 
-    # You can set the level to logger.DEBUG or logger.WARN if you
-    # want to change the amount of output.
-    logger.set_level(logger.INFO)
-
     env = gym.make('GuessingNumber-v0')
     env.seed(0)
     agent = BetterRandomAgent(env.action_space)
@@ -66,7 +62,7 @@ if __name__ == '__main__':
 
     # Close the env and write monitor result info to disk
 
-    print(f'Total better random reward {total_reward}, average guess {round(total_guesses/100,1)}')
+    print(f'Total better random reward {total_reward}, average guess {round(total_guesses / 100, 1)}')
 
     env.seed(0)
     agent = RandomAgent(env.action_space)
@@ -92,5 +88,4 @@ if __name__ == '__main__':
 
     # Close the env and write monitor result info to disk
     env.close()
-    print(f'Total better random reward {total_reward}, average guess {round(total_guesses/100,1)}')
-
+    print(f'Total better random reward {total_reward}, average guess {round(total_guesses / 100, 1)}')
