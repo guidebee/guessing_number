@@ -79,4 +79,4 @@ if __name__ == '__main__':
 
     # Close the env and write monitor result info to disk
     env.close()
-    print(f'Total better random reward {total_reward}, average guess {round(total_guesses / 100, 1)}')
+    print(f'Total random reward {total_reward}, average guess {round(total_guesses / 100, 1)}')

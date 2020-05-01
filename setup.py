@@ -1,6 +1,4 @@
-#!/usr/bin/env python
 
-# Third party
 from setuptools import find_packages, setup
 
 setup(
